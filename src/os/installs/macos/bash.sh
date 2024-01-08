@@ -49,7 +49,7 @@ export PATH
 
     if ! grep "$newShellPath" < /etc/shells &> /dev/null; then
         execute \
-            "printf '%s\n' '$newShellPath' | sudo tee -a /etc/shells" \
+            "sudo printf '%s\n' '$newShellPath' | sudo tee -a /etc/shells" \
             "Add '$newShellPath' in '/etc/shells'" \
         || return 1
     fi
