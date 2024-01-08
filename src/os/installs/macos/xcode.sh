@@ -39,45 +39,45 @@ install_xcode() {
 
 }
 
-install_lightshoot() {
+# install_lightshoot() {
 
-    # If necessary, prompt user to install `Lightshoot`.
+#     # If necessary, prompt user to install `Lightshoot`.
 
-    if ! is_lightshoot_installed; then
-        open "macappstores://itunes.apple.com/en/app/lightshot-screenshot/id526298438"
-    fi
+#     if ! is_lightshoot_installed; then
+#         open "macappstores://itunes.apple.com/en/app/lightshot-screenshot/id526298438"
+#     fi
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Wait until `Lightshoot` is installed.
+#     # Wait until `Lightshoot` is installed.
 
-    execute \
-        "until is_lightshoot_installed; do \
-            sleep 5; \
-         done" \
-        "Install Lightshot Screenshot.app"
+#     execute \
+#         "until is_lightshoot_installed; do \
+#             sleep 5; \
+#          done" \
+#         "Install Lightshot Screenshot.app"
 
-}
+# }
 
-install_amphetamine() {
+# install_amphetamine() {
 
-    # If necessary, prompt user to install `Amphetamine`.
+#     # If necessary, prompt user to install `Amphetamine`.
 
-    if ! is_amphetamine_installed; then
-        open "macappstores://itunes.apple.com/en/app/amphetamine/id937984704"
-    fi
+#     if ! is_amphetamine_installed; then
+#         open "macappstores://itunes.apple.com/en/app/amphetamine/id937984704"
+#     fi
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Wait until `Amphetamine` is installed.
+#     # Wait until `Amphetamine` is installed.
 
-    execute \
-        "until is_amphetamine_installed; do \
-            sleep 5; \
-         done" \
-        "Install Amphetamine.app"
+#     execute \
+#         "until is_amphetamine_installed; do \
+#             sleep 5; \
+#          done" \
+#         "Install Amphetamine.app"
 
-}
+# }
 
 install_xcode_command_line_tools() {
 
