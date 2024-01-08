@@ -1,4 +1,4 @@
-[Lucatronlk][repo]’s dotfiles
+[Luca][repo]’s dotfiles
 ==========================
 
 [![CI status for macOS][ci badge macos]][ci link macos]
@@ -11,32 +11,33 @@ a new environment (for more specific local needs I use the
 Table of Contents
 -----------------
 
-* [🔧 Setup](#setup)
-* [📸 Screenshots](#screenshots)
-  * [🔁 Git](#git)
-  * [⌨️  tmux & Vim](#tmux--vim)
-* [💄 Customize](#customize)
-  * [🔀 Forks](#forks)
-  * [🌐 Local Settings](#local-settings)
-    * [🐚 `~/.bash.local`](#bashlocal)
-    * [🔁 `~/.gitconfig.local`](#gitconfiglocal)
-    * [⌨️  `~/.vimrc.local`](#vimrclocal)
-* [↕️  Update](#update)
-* [📑 License](#license)
+- [Luca’s dotfiles](#lucas-dotfiles)
+  - [Table of Contents](#table-of-contents)
+  - [Setup](#setup)
+  - [Screenshots](#screenshots)
+    - [Git](#git)
+    - [tmux \& Vim](#tmux--vim)
+  - [Customize](#customize)
+    - [Local Settings](#local-settings)
+      - [`~/.bash.local`](#bashlocal)
+      - [`~/.gitconfig.local`](#gitconfiglocal)
+      - [`~/.vimrc.local`](#vimrclocal)
+    - [Forks](#forks)
+  - [Update](#update)
+  - [License](#license)
 
 Setup
 -----
 
 To set up the dotfiles run the appropriate snippet in the terminal:
 
-> [!CAUTION]
-> __DO NOT__ run the setup script if you do not fully understand
-> [what it does][setup]. Seriously, __DON'T__!
+(⚠️  __DO NOT__ run the `setup` script if you do not fully understand
+[what it does][setup]. Seriously, __DON'T__!)
 
 | OS | Snippet |
 |:---|:---|
-| macOS | `bash -c "$(curl -LsS https://raw.github.com/Lucatronlk/dotfiles/main/src/os/setup.sh)"` |
-| Ubuntu | `bash -c "$(wget -qO - https://raw.github.com/Lucatronlk/dotfiles/main/src/os/setup.sh)"` |
+| macOS | `bash -c "$(curl -LsS https://raw.github.com/Lucatronlk/dotfiles-ubuntu/main/src/os/setup.sh)"` |
+| Ubuntu | `bash -c "$(wget -qO - https://raw.github.com/Lucatronlk/dotfiles-ubuntu/main/src/os/setup.sh)"` |
 
 That's it! ✨
 
@@ -55,10 +56,9 @@ The setup process will:
 
 Setup process in action:
 
-<!-- markdownlint-disable MD033 -->
-| <video src="https://user-images.githubusercontent.com/1223565/236653425-5beae04a-39e3-4f29-8113-009e402818e6.mp4" title="Setup process on macOS"/> |<video src="https://user-images.githubusercontent.com/1223565/236653424-1702c359-1b68-4815-b3cc-96f6665c5e88.mp4" title="Setup process on Ubuntu"/> |
+| ![Setup process on macOS][setup macos] | ![Setup process on Ubuntu][setup ubuntu] |
 |:---:|:---:|
-<!-- markdownlint-enable MD033 -->
+| macOS | Ubuntu |
 
 Screenshots
 -----------
@@ -106,7 +106,7 @@ Here is an example:
 
 # Set PATH additions.
 
-PATH="/Users/alrra/projects/dotfiles/src/bin/:$PATH"
+PATH="/Users/lucatronlk/projects/dotfiles/src/bin/:$PATH"
 
 export PATH
 
@@ -136,7 +136,7 @@ such as the Git user credentials, e.g.:
 
 [user]
 
-    name = Your Name
+    name = Luca Alexandru
     email = account@example.com
     signingKey = XXXXXXXX
 ```
@@ -168,15 +168,15 @@ nnoremap <Up>    :echoe "Use k"<CR>
 ### Forks
 
 If you decide to [fork] this project, do not forget to substitute
-my username with your own in the [setup snippets](#setup) and [in
-the setup script][setup script].
+my username with your own in the [`setup` snippets](#setup) and
+[in the `setup` script][setup script].
 
 Update
 ------
 
-To update the dotfiles you can either run the [setup script][setup]
+To update the dotfiles you can either run the [`setup` script][setup]
 or, if you want to update one particular part, run the appropriate
-[os script](src/os).
+[`os` script](src/os).
 
 License
 -------
@@ -201,7 +201,9 @@ The code is available under the [MIT license][license].
 [preferences macos]: src/os/preferences/macos
 [preferences ubuntu]: src/os/preferences/ubuntu
 [repo]: https://github.com/alrra
+[setup macos]: https://cloud.githubusercontent.com/assets/1223565/19314446/cd89a592-90a2-11e6-948d-9d75247088ba.gif
 [setup script]: https://github.com/alrra/dotfiles/blob/main/src/os/setup.sh#L3
+[setup ubuntu]: https://user-images.githubusercontent.com/1223565/101978032-d0791a80-3c06-11eb-8870-661d0eb3f543.gif
 [setup]: src/os/setup.sh
 [shell]: src/shell
 [symlink]: src/os/create_symbolic_links.sh
