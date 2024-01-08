@@ -15,6 +15,7 @@ printf "\n"
 brew_install "Chrome" "google-chrome" "--cask"
 brew_install "Chrome Canary" "google-chrome-canary" "--cask" "homebrew/cask-versions"
 brew_install "Chromium" "chromium" "--cask" "homebrew/cask-versions"
+brew_install "Google Chrome" "google-chrome" "--cask"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

@@ -58,6 +58,46 @@ install_xcode_command_line_tools() {
 
 }
 
+install_lightshoot() {
+
+    # If necessary, prompt user to install `Lightshoot`.
+
+    if ! is_lightshoot_installed; then
+        open "macappstores://itunes.apple.com/en/app/lightshot-screenshot/id526298438"
+    fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Wait until `Lightshoot` is installed.
+
+    execute \
+        "until is_lightshoot_installed; do \
+            sleep 5; \
+         done" \
+        "Install Lightshot Screenshot.app"
+
+}
+
+install_amphetamine() {
+
+    # If necessary, prompt user to install `Amphetamine`.
+
+    if ! is_amphetamine_installed; then
+        open "macappstores://itunes.apple.com/en/app/amphetamine/id937984704"
+    fi
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Wait until `Amphetamine` is installed.
+
+    execute \
+        "until is_amphetamine_installed; do \
+            sleep 5; \
+         done" \
+        "Install Amphetamine.app"
+
+}
+
 is_xcode_installed() {
     [ -d "/Applications/Xcode.app" ]
 }
@@ -84,6 +124,8 @@ main() {
     install_xcode
     set_xcode_developer_directory
     agree_with_xcode_licence
+    install_lightshoot
+    install_amphetamine
 
 }
 

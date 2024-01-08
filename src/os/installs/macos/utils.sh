@@ -4,6 +4,13 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
     && . "../../utils.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - Install vscode plugings - - - - - - - - - - - - - -
+
+install_plugin() {
+    execute "code --install-extension $2" "$1 plugin"
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 brew_install() {
 
