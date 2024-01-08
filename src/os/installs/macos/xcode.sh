@@ -39,25 +39,6 @@ install_xcode() {
 
 }
 
-install_xcode_command_line_tools() {
-
-    # If necessary, prompt user to install
-    # the `Xcode Command Line Tools`.
-
-    xcode-select --install &> /dev/null
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    # Wait until the `Xcode Command Line Tools` are installed.
-
-    execute \
-        "until are_xcode_command_line_tools_installed; do \
-            sleep 5; \
-         done" \
-        "Install Xcode Command Line Tools"
-
-}
-
 install_lightshoot() {
 
     # If necessary, prompt user to install `Lightshoot`.
@@ -98,6 +79,25 @@ install_amphetamine() {
 
 }
 
+install_xcode_command_line_tools() {
+
+    # If necessary, prompt user to install
+    # the `Xcode Command Line Tools`.
+
+    xcode-select --install &> /dev/null
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Wait until the `Xcode Command Line Tools` are installed.
+
+    execute \
+        "until are_xcode_command_line_tools_installed; do \
+            sleep 5; \
+         done" \
+        "Install Xcode Command Line Tools"
+
+}
+
 is_xcode_installed() {
     [ -d "/Applications/Xcode.app" ]
 }
@@ -126,7 +126,6 @@ main() {
     #install_xcode
     #set_xcode_developer_directory
     #agree_with_xcode_licence
-
 
 }
 
