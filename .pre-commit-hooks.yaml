@@ -1,0 +1,11 @@
+-   id: validate_manifest
+    name: validate pre-commit manifest
+    description: This validator validates a pre-commit hooks manifest file
+    entry: pre-commit validate-manifest
+    language: python
+    files: ^\.pre-commit-hooks\.yaml$
+-   id: git-secrets
+    name: Git Secrets
+    description: git-secrets scans commits, commit messages, and --no-ff merges to prevent adding secrets into your git repositories.
+    entry: 'git-secrets --pre_commit_hook'
+    language: script

@@ -1,7 +1,7 @@
 if has("gui_running")
-	hi default link RainbowLevel0 Special
+    hi default link RainbowLevel0 Special
 else
-	hi default link RainbowLevel0 Todo
+    hi default link RainbowLevel0 Todo
 endif
 
 hi default link RainbowLevel1 Function
@@ -12,5 +12,5 @@ hi default link RainbowLevel5 PreProc
 hi default link RainbowLevel6 Number
 
 for level in range(0, 6)
-	exe 'hi! link RainbowLevel'.(level+7).' RainbowLevel'.level
+    exe 'hi! link RainbowLevel'.(level+7).' RainbowLevel'.level
 endfor

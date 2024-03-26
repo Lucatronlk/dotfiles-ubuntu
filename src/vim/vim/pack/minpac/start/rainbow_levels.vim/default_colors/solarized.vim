@@ -7,5 +7,5 @@ hi default link RainbowLevel5 Identifier
 hi default link RainbowLevel6 Underlined
 
 for level in range(0, 6)
-	exe 'hi! link RainbowLevel'.(level+7).' RainbowLevel'.level
+    exe 'hi! link RainbowLevel'.(level+7).' RainbowLevel'.level
 endfor
